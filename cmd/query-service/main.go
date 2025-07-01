@@ -6,8 +6,8 @@ import (
 	"net"
 	"github.com/redis/go-redis/v9"
 	"google.golang.org/grpc"
-	routepb ""
-	"github.com/query"
+	"github.com/KingBean4903/cqrs-logistics-fleet-tracking/services/query"
+	routepb "github.com/KingBean4903/cqrs-logistics-fleet-tracking/api/gen"
 )
 
 func main() {

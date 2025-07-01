@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package route;
 
-option go_package= "github.com/KingBean4903/cqrs-logistics-fleet-tracking/api/gen;routepb";
+option go_package= "github.com/KingBean4903/cqrs-logistics-fleet-tracking/api/gen";
 
 service RouteService {
   rpc CreateRoute(CreateRouteRequest) returns (CreateRouteResponse);

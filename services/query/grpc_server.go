@@ -2,7 +2,7 @@ package query
 
 import (
 	"context"
-	routepb "gen"
+	routepb "github.com/KingBean4903/cqrs-logistics-fleet-tracking/api/gen"
 )
 
 type QueryGRPCServer struct {

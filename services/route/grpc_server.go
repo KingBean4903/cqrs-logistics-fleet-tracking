@@ -3,7 +3,7 @@ package route
 import (
 	"context"
 	"time"
-	routepb "github.com/"
+	routepb "github.com/KingBean4903/cqrs-logistics-fleet-tracking/api/gen"
 )
 
 type GRPCServer struct {
