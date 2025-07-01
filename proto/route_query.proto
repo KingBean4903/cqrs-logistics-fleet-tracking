@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package route;
+
+option go_package = "github.com/KingBean4903/cqrs-logistics-fleet-tracking/api/gen;protopb";
+
+service  RouteQueryService {
+  rpc GetRoute(GetRouteRequest) returns (GetRouteResponse);
+  rpc ListRoutes(ListRoutesRequest) returns (ListRoutesResponse);
+}
+
+message GetRouteRequest {
+    string id = 1;
+}
+
+message GetRouteResponse {
+  string id = 1;
+  string origin = 2;
+  string destination = 3;
+  string assigned_driver = 4;
+  string status = 5;
+  int64 last_updated = 6;
+}
+
+message ListRoutesRequest {}
+
+message ListRoutesResponse {
+  repeated RouteView routes = 1;
+}
+
+message RouteView {
+  string id = 1;
+  string origin = 2;
+  string destination = 3;
+  string assigned_driver = 4;
+  string status = 5;
+  int64 last_updated = 6;
+}

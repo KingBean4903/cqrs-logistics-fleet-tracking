@@ -1,0 +1,5 @@
+service RouteService {
+  rpc CreateRoute(CreateRouteRequest) return(CreateRouteResponse);
+  rpc UpdateRoute(UpdateRouteRequest) return(UpdateRouteResponse);
+  rpc AssignDriver(AssignDriverRequest) return(AssignDriverResponse);
+}

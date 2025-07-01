@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package route;
+
+option go_package= "github.com/KingBean4903/cqrs-logistics-fleet-tracking/api/gen;routepb";
+
+service RouteService {
+  rpc CreateRoute(CreateRouteRequest) returns (CreateRouteResponse);
+  rpc UpdateRoute(UpdatedRouteRequest) returns (UpdatedRouteResponse);
+  rpc AssignDriver(AssignDriverRequest) returns (AssignDriverResponse);
+}
+
+message CreateRouteRequest {
+  string id = 1;
+  string origin = 2;
+  string destination = 3;
+}
+
+message CreateRouteResponse {
+  bool success = 1;
+}
+
+message UpdatedRouteRequest {
+  string id = 1;
+  optional string origin = 2;
+  optional string destination = 3;
+}
+
+message UpdatedRouteResponse {
+  bool success = 1;
+}
+
+message AssignDriverRequest {
+    string route_id = 1;
+    string driver_id = 2;
+}
+
+message AssignDriverResponse {
+    bool success = 1;
+}
